@@ -8,11 +8,11 @@ import i18n from './locales'
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    { path: '/', component: import('./views/index.vue') },
-    { path: '/product', component: import('./views/product.vue') },
-    { path: '/news', component: import('./views/news.vue') },
-    { path: '/about-us', component: import('./views/aboutUs.vue') },
-    { path: '/contact-us', component: import('./views/contactUs.vue') },
+    { path: '/', component: () => import('./views/index.vue') },
+    { path: '/product', component: () => import('./views/product.vue') },
+    { path: '/news', component: () => import('./views/news.vue') },
+    { path: '/about-us', component: () => import('./views/aboutUs.vue') },
+    { path: '/contact-us', component: () => import('./views/contactUs.vue') },
   ],
 })
 
